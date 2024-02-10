@@ -1,5 +1,6 @@
 print ("Program: Target GPA")
 print ("Programmer: Victor Misyutin")
+print ("CSC 242 Python Data Structures")
 print ("-------------------------")
 # ---------------------------------------------------
 # variables declared and initialized

@@ -1,4 +1,10 @@
-
-list1 = []
-list1.append("value") ; list1.insert(1, 10); list1.insert(0,20)
-print (list1)
+def Departments(val) :
+   code = 100
+   match code :
+      case 100 :
+         print ("Accounting")
+      case 100 :
+         print ("Finance")
+      case _ :
+         print("other department")
+Departments(30)
