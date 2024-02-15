@@ -1,5 +1,6 @@
 # cryptography ( shuffle elements in a list )
 import random
+import time
 # for random shuffle
 strMsg = "The Courier is En Route with the Documents"
 # the plaintext secret message
@@ -26,7 +27,7 @@ scrambledList = []
 # use list() to cast the plaintext list into the ciphertext list
 # randomly scramble the list of characters
 print("perform a random shuffle:")
-scrambledList = plainTxtList
+scrambledList = plainTxtList[:]
 random.shuffle(scrambledList)
 print (scrambledList, "\n")
 print ("length of the scrambled list, \n")
@@ -38,18 +39,17 @@ for index in range(len(scrambledList)) :
         print()
     print (scrambledList[index], end='')
 print()
-# # decrypt
-# decrypted = False 
-# count = 0
-# while not decrypted:
-#     equal = True
-#     for index in range(len(scrambledList)):
-#         if scrambledList[index] != plainTxtList[index]:
-#             equal = False
-#             break
-#     if equal:
-#         decrypted = True
-#     else:
-#         random.shuffle(scrambledList)
-#         count = count + 1
-# print(f"Done, took {count} iterations.")
+
+# decryption
+decrypted = False 
+count = 0
+start_time = time.time()  # Start timing
+while scrambledList != plainTxtList:
+    random.shuffle(scrambledList)
+    count = count + 1
+    if (time.time() -  start_time) > 10:
+        print("Decryption terminated after 10 seconds")
+        break
+elapsed_time = time.time() - start_time
+print(f"It took {count} iterations and {elapsed_time} seconds.")
+# I ran this decryption algorithm for over two minutes without completion 
