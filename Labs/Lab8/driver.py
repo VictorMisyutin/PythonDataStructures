@@ -56,5 +56,3 @@ for i in range(len(ms)) :
         print ("in scene sequence number ", i + 1)
         print ("\"", ms.getScript()[i], "\"")
         print ("\n")
-
-
