@@ -1,16 +1,10 @@
-queue = []
- 
-queue.append("Jake")
-queue.append("Jill")
+# reversing a list using reversed()
+def Reverse(lst) :
+    return [elem for elem in reversed(lst)]
 
-print("Dequeued customer:", queue.pop(0))
-
-queue.append("Iris")
-
-print("Dequeued customer:", queue.pop(0))
-
-queue.append("David")
-
-print("Size of the queue:", len(queue))
-
-print("Customer at the front of the queue:", queue[0])
+# driver code
+lst = [11, 12, 13, 14, 15, 16]
+# lst = Reverse(lst)
+print (Reverse(lst))
+lst.pop(0)
+print (lst)

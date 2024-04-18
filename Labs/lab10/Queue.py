@@ -1,6 +1,5 @@
 # filename: Queue.py
 class Queue() :
-    
     # construct the list to implement the queue
     def __init__(self) :
         self.queue = []
@@ -8,7 +7,7 @@ class Queue() :
     # enqueue an element
     def enqueue(self, item) :
         self.queue.append(item)
-    
+        
     # remove an element from the queue
     def dequeue(self) :
         if (len(self.queue) < 1) :
@@ -24,3 +23,11 @@ class Queue() :
     # return the size of the queue
     def size(self) :
         return len(self.queue)
+    
+    # return true if queue is empty
+    def isEmpty(self):
+        return len(self.queue) == 0
+    
+    # return next element without dequeing
+    def peek(self):
+        return self.queue[0]
