@@ -1,10 +1,8 @@
-# reversing a list using reversed()
-def Reverse(lst) :
-    return [elem for elem in reversed(lst)]
-
-# driver code
-lst = [11, 12, 13, 14, 15, 16]
-# lst = Reverse(lst)
-print (Reverse(lst))
-lst.pop(0)
-print (lst)
+setA = set({1, 3, 10, 0})
+setB = set({2, 7, -4})
+blnCheck1 = setA.isdisjoint(setB)
+blnCheck2 = setA.issubset(setB)
+print(blnCheck1)
+print(blnCheck2)
+print (blnCheck1 and blnCheck2)
+print (blnCheck1 or blnCheck2)
